@@ -1,0 +1,83 @@
+var sliderRate;
+
+var tierra
+var anguloT=0;
+
+var sol
+var anguloS=0;
+var neptuno
+var anguloN =0;
+
+
+var jupiter
+var anguloJ=0;
+
+var luna
+var anguloL=0;
+
+
+
+function setup() {
+  createCanvas(1000,1000);
+  
+  Sol = loadImage('sol.jpg');
+  Tierra = loadImage('tierra.jpg');
+  Jupiter = loadImage('jupiter.jpg');
+  Neptuno = loadImage('neptuno.jpg');
+  Luna = loadImage('luna.jpg');
+  sliderRate = createSlider(0, 2, 2, 0.1);
+}
+
+function draw() {
+  background(0);
+  
+  push();
+  translate(400,400);
+  rotate(anguloS);
+  scale(0.3);
+  imageMode(CENTER);
+  image(Sol,0,0);
+  anguloS = anguloS +0.013;
+  pop();
+  
+  
+  
+  push();
+  translate(400,400);
+  rotate(anguloT);
+  scale(0.1);
+  imageMode(CENTER);
+  image(Tierra,900,900);
+  anguloT = anguloT +0.013;
+  pop();
+  
+  push();
+  translate(400,450);
+  rotate(anguloL);
+  scale(0.1);
+  imageMode(CENTER);
+  image(Luna,900,900);
+  anguloL = anguloL +0.013;
+  pop();
+  
+  push();
+  translate(400,400);
+  rotate(anguloJ);
+  scale(0.1,0.1);
+  imageMode(CENTER);
+  image(Jupiter,1800,1800);
+  anguloJ = anguloJ +0.04;
+  pop();
+  
+  push();
+  translate(400,400);
+  rotate(anguloN);
+  scale(0.2);
+  imageMode(CENTER);
+  image(Neptuno,1300,1300);
+  anguloN = anguloN +0.03;
+  pop();
+  
+  
+  
+}
